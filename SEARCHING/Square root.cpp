@@ -18,7 +18,7 @@ int mySqrt(int x) {
         }
         else{
             low =mid+1;
-            res= mid;
+            res= mid; // because we want to find the floor of square root , all the values less than the number can be floor and are stored.
         }
      }
      return res;
