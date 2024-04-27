@@ -51,8 +51,8 @@ vector<vector<int>> threeSum(vector<int>& nums) {
             vector <int> add;
             ans.push_back({nums[i],nums[low],nums[high]});
             while (low<high && nums[low]==nums[low+1]) low++;
-            while (low<high && nums[high]==nums[high-1]) high--;  // to skip duplicates 
-              low++;
+            while (low<high && nums[high]==nums[high-1]) high--;  // to skip duplicates but will end on a duplicate therefor we incremnet both the pointers later
+              low++; // if there are no duplicates it is necessary to move shift to the next elements to avoid duplicate triplets
               high--;
            }
         }
