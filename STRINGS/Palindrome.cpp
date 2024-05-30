@@ -50,3 +50,30 @@ bool isPalindrome (string str){
     return true;
 }
 
+// leetcode problem valid palindrome - https://leetcode.com/problems/valid-palindrome/
+
+class Solution {
+public:
+    bool isPalindrome(string s) {
+      string t = "";
+      for (char x: s){ // for each loop 
+        if (isalnum(x)){ // isalnum(x) function checks if the character is alphanumeric or not 
+            t+= tolower(x); // detailed explaination in notebook
+        }
+      }
+      int start =0;
+      int end= t.length()-1;
+      while (start<end){
+        if (t[start]==t[end]){
+            start++;
+            end--;
+        }
+        else {
+            return false;
+        }
+      }
+      return true;
+    }
+    
+
+};
