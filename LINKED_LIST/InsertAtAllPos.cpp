@@ -32,7 +32,7 @@ void print(Node *&head){
 }
 
 void insertAtPos(Node *&head,Node *&tail, int pos, int d){
-
+// if the user wants to add a node to the beg of the linked list.
 if(pos ==1){
     InsertAtHead(head, d);
     return;
@@ -44,6 +44,7 @@ if(pos ==1){
         temp = temp->next;
         cnt++;
     }
+    // if the user adds the node to the end of the linked list.
     if(temp->next == NULL){
         InsertAtTail(tail, d);
         return;
